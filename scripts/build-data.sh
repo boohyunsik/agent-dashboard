@@ -32,8 +32,8 @@ for i in "${!AGENTS[@]}"; do
   soul_md=""
   [[ -f "$ws/SOUL.md" ]] && soul_md=$(cat "$ws/SOUL.md")
 
-  # Get model from config
-  model=$(jq -r '.agents.defaults.model.primary // "unknown"' "$CONFIG" 2>/dev/null || echo "unknown")
+  # Get model from config (per-agent first, then default)
+  model=$(jq -r --arg id "$id" '(.agents.list[] | select(.id == $id) | .model // null) // .agents.defaults.model.primary // "unknown"' "$CONFIG" 2>/dev/null || echo "unknown")
 
   # Subagent permissions
   subagents=$(jq -r --arg id "$id" '.agents.list[] | select(.id == $id) | .subagents.allowAgents // [] | join(", ")' "$CONFIG" 2>/dev/null || echo "")
