@@ -1,0 +1,26 @@
+[
+  {
+    "id": "pm",
+    "workspace": "workspace-pm",
+    "recentMemory": [],
+    "builtAt": "2026-02-14T19:07:11Z"
+  },
+  {
+    "id": "dev",
+    "workspace": "workspace-dev",
+    "recentMemory": [],
+    "builtAt": "2026-02-14T19:07:11Z"
+  },
+  {
+    "id": "reviewer",
+    "workspace": "workspace-reviewer",
+    "recentMemory": [],
+    "builtAt": "2026-02-14T19:07:11Z"
+  },
+  {
+    "id": "qa",
+    "workspace": "workspace-qa",
+    "recentMemory": [],
+    "builtAt": "2026-02-14T19:07:11Z"
+  }
+]

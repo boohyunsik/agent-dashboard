@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>🤖 Agent Dashboard</h1>
+      <nav>
+        <a href="#" data-section="agents" class="active">👥 Agents</a>
+        <a href="#" data-section="projects">📁 Projects</a>
+        <a href="#" data-section="logs">📝 Logs</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <!-- Agents Section -->
+      <div id="agents" class="section active">
+        <h2>Agents</h2>
+        <div id="agent-grid" class="card-grid"></div>
+        <div id="agent-detail" class="detail-panel">
+          <h3></h3>
+          <div class="tab-bar">
+            <button data-tab="agents-md" class="active">AGENTS.md</button>
+            <button data-tab="soul-md">SOUL.md</button>
+            <button data-tab="memory">Memory</button>
+          </div>
+          <div id="detail-content"></div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <div id="projects" class="section">
+        <h2>Projects</h2>
+        <div id="project-list" class="project-list"></div>
+      </div>
+
+      <!-- Logs Section -->
+      <div id="logs" class="section">
+        <h2>Recent Activity</h2>
+        <div id="logs-content"></div>
+      </div>
+
+      <div class="footer">
+        Built at: <span id="built-at">—</span> · Agent Dashboard v1.0
+      </div>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
